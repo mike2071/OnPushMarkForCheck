@@ -12,6 +12,10 @@ export class AppService {
   myServiceFunction() {
     setInterval(x => {
       this.myEventEmitter.emit(Date.now());
-    }, 5000);
+    }, 2000);
+  }
+
+  resetEventEmmitter() {
+      this.myEventEmitter = new EventEmitter();
   }
 }
