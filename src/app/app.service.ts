@@ -14,8 +14,4 @@ export class AppService {
       this.myEventEmitter.emit(Date.now());
     }, 2000);
   }
-
-  resetEventEmmitter() {
-      this.myEventEmitter = new EventEmitter();
-  }
 }

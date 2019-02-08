@@ -7,8 +7,8 @@
 </div>
 
 <button (click)="getData()">Get Data</button>
-<button (click)="stopData()">Stop</button>
-<h2>Current Time: {{ time }}</h2>
+<button (click)="complete()">Stop</button>
+<h2>Current Time: {{ time | date:'HH:mm:ss.SSS' }}</h2>
 
 <app-child [addItemStream]="mySubject"></app-child>
 

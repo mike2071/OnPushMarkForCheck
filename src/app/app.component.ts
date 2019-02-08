@@ -15,8 +15,6 @@ export class AppComponent implements OnInit {
   time = Date.now();
   mySubject = new Subject<any>();
 
-  time: Date;
-
   constructor(private appService: AppService) {
 
   }
@@ -34,10 +32,8 @@ export class AppComponent implements OnInit {
     this.appService.myServiceFunction();
   }
 
-  stopData() {
-    console.log('Stopped');
-    this.appService.myEventEmitter.unsubscribe();
-    // this.time = Date.now()
-    this.appService.resetEventEmmitter()
+  complete() {
+    console.log('Completed');
+    this.appService.myEventEmitter.complete();
   }
 }
